@@ -103,7 +103,7 @@ export function MangoRankingForm() {
     <div className="w-full min-h-screen bg-background text-foreground p-4 md:p-6">
       <main className="container mx-auto max-w-md space-y-3">
         <h1 className="text-3xl text-center font-bold">Welcome to the 7th Annual</h1>
-        <h1 className="text-3xl text-center font-bold pb-8">🥭 Mango Tango! 🥭</h1>
+        <h1 className="text-3xl text-center font-bold pb-8">🥭 Mango Tango! 💃</h1>
         <h2 className="text-xl text-center font-bold">Please rank each mango as you eat them, high scores to the right!</h2>
         <div className="pt-8 space-y-4">
           {ratingsArray.map(([mango, rating], index) => (

@@ -9,7 +9,7 @@ const ResultsPage = () => {
           Your mango rankings have been successfully submitted.
         </p>
         <div className="flex flex-col">
-          <Link href="/results" className="mt-6 inline-block bg-muted-foreground text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-blue-600">
+          <Link href="/results" className="mt-6 inline-block bg-muted-foreground text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-muted">
             See Results
           </Link>
           <Link href="/" className="mt-6 inline-block bg-muted text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-muted-foreground">
