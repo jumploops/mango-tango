@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 const transformName = (name: string): string => {
   return name
@@ -6,7 +6,8 @@ const transformName = (name: string): string => {
     .replace(/^\w/, c => c.toUpperCase());  // Capitalize the first letter
 };
 
-export async function GET() {
+export async function POST(request: NextRequest) {
+
   const url = process.env.MAGIC_LOOP_RESULTS_URL || "";
 
   try {
@@ -23,11 +24,7 @@ export async function GET() {
     }
 
     const responseJson = await response.json();
-    console.log(responseJson);
     const { names, ratings } = responseJson.loopOutput;
-
-    console.log('STATUS:', responseJson.status);
-    console.log('OUTPUT:', responseJson.loopOutput);
 
     return NextResponse.json({ names: names.map(transformName), ratings });
   } catch (error) {

@@ -10,7 +10,7 @@ const ResultsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/get-results');
+        const response = await fetch('/api/get-results', { method: "POST" });
         const result = await response.json();
         setData(result);
         console.log(result);
@@ -33,6 +33,7 @@ const ResultsPage = () => {
   }
 
   let numRatings = 0;
+  // @ts-ignore
   for (const rating of data.ratings) {
     if (rating.length > numRatings) {
       numRatings = rating.length
@@ -44,7 +45,7 @@ const ResultsPage = () => {
       <main className="container mx-auto max-w-md space-y-6 text-center">
         <h1 className="text-3xl font-bold">Here are the current results!</h1>
         <p className="text-lg">
-          (So far we've had {numRatings} ratings)
+          (So far we&apos;ve had {numRatings} ratings)
         </p>
         <ViolinChart data={data} />
         <div className="flex flex-col">

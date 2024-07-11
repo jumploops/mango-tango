@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+// @ts-ignore
 const MangoDisplay = ({ score }) => {
   const numberOfMangos = Math.floor((score ?? 0) / 2) || 1;
 
@@ -48,6 +49,7 @@ export function MangoRankingForm() {
   const handleRowClick = (mango: string) => {
     if (!visibleSliders.includes(mango)) {
       setVisibleSliders((prev) => [...prev, mango]);
+      // @ts-ignore
       if (ratings[mango] === null) {
         setRatings((prevRatings) => ({
           ...prevRatings,

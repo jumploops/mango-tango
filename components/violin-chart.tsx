@@ -48,9 +48,11 @@ const ViolinChart: React.FC<ViolinChartProps> = ({ data }) => {
 
     const density = data.ratings.map(d => kde(epanechnikov(0.5), x.ticks(40), d));
 
+    // @ts-ignore
     const maxDensity = d3.max(density.flatMap(d => d.map(([_, value]) => value)))!;
 
     const yNum = d3.scaleLinear()
+      // @ts-ignore
       .domain([-maxDensity, maxDensity])
       .range([0, y.bandwidth()]);
 
