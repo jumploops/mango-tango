@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     }
 
     // Define the URL for the Magic Loop
-    const url = process.env.MAGIC_LOOP_SUBMIT_RANKINGS_URL || "";
+    const url = process.env.MAGIC_LOOP_SUBMIT_URL || "";
 
     // Call the Magic Loop
     const response = await fetch(url, {
