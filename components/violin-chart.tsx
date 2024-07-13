@@ -26,7 +26,7 @@ const ViolinChart: React.FC<ViolinChartProps> = ({ data }) => {
       .padding(0.1);
 
     const x = d3.scaleLinear()
-      .domain([0, 10])
+      .domain([0, 11])
       .nice()
       .range([margin.left, width - margin.right]);
 

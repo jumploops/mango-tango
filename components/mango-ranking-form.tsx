@@ -23,16 +23,28 @@ const MangoDisplay = ({ score }) => {
 export function MangoRankingForm() {
   const router = useRouter();
   const [ratings, setRatings] = useState({
-    Taralay: null,
-    Zill: null,
-    Bombay: null,
-    Keitt: null,
-    "Bailey's Marvel": null,
-    Kent: null,
+    Heiden: null,
+    "Edward’s": null,
+    Keith: null,
     "Tommy Atkins": null,
-    "Valencia Pride": null,
+    Honey: null,
+    Costco: null,
     Irwin: null,
+    "Tara Lay": null,
+    NDM: null,
+    "Jerry’s Special": null,
+    "Valencia Pride": null,
+    "Bailey’s Marvel": null,
+    Phil: null,
+    Kent: null,
+    Champagne: null,
+    Baby: null,
+    Tierno: null,
+    Bombay: null,
     Osteen: null,
+    Cabello: null,
+    "G???": null,
+    Zill: null,
   });
   const [name, setName] = useState("");
   const [visibleSliders, setVisibleSliders] = useState<string[]>([]);
@@ -111,7 +123,7 @@ export function MangoRankingForm() {
           {ratingsArray.map(([mango, rating], index) => (
             <div
               key={mango}
-              className={`p-4 h-[105px] rounded-lg ${rating !== null
+              className={`p-4 h-[105px] rounded-lg cursor-pointer ${rating !== null
                 ? rating <= 1
                   ? "bg-muted-foreground"
                   : rating <= 2
@@ -150,7 +162,7 @@ export function MangoRankingForm() {
                   min={1}
                   max={10}
                   step={1}
-                  className={`w-full ${rating <= 2 ? "bg-red-500" : rating <= 4 ? "bg-yellow-500" : "bg-green-500"
+                  className={`w-full cursor-pointer ${rating <= 2 ? "bg-red-500" : rating <= 4 ? "bg-yellow-500" : "bg-green-500"
                     }`}
                 />
               )}
